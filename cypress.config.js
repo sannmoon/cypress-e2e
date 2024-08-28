@@ -1,8 +1,9 @@
 const { defineConfig } = require("cypress");
+const envs = require("./cypress.env.json");
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: Cypress.env("baseUrl"),
+    baseUrl: envs.baseUrl,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
